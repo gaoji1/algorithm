@@ -1,0 +1,80 @@
+#include<iostream>
+#include <algorithm>
+
+using namespace std;
+
+
+
+
+
+int main() {
+	int mat[5][5];
+	int direction=0;
+	int x;
+	int y;
+	int number;
+	while(cin>>mat[0][0]>>mat[0][1]>>mat[0][2]>>mat[0][3]>>mat[0][4]){
+		for(int i=1;i<5;i++){
+			for(int j=0;j<5;j++){
+				cin>>mat[i][j];
+			}
+		}
+		cin>>direction>>number>>x>>y;
+		if(number == 2){
+			int midX = x-1;
+	 		int midY = y-1;
+
+			if(direction == 1){
+				int temp = mat[midX][midY];
+				mat[midX][midY] = mat[midX+1][midY];
+				mat[midX+1][midY] = mat[midX+1][midY+1];
+				mat[midX+1][midY+1] = mat[midX][midY+1];
+				mat[midX][midY+1] = temp;
+			}else if(direction == 2){
+				int temp = mat[midX][midY];
+				mat[midX][midY] = mat[midX][midY+1];
+				mat[midX][midY+1] = mat[midX+1][midY+1];
+				mat[midX+1][midY+1] = mat[midX+1][midY];
+				mat[midX+1][midY] = temp;
+			}
+		}else if(number ==3){
+			int midX = x;
+			int midY = y;
+			if(direction ==1){
+				int temp = mat[midX-1][midY-1];
+				mat[midX-1][midY-1] = mat[midX+1][midY-1];
+				mat[midX+1][midY-1] = mat[midX+1][midY+1];
+				mat[midX+1][midY+1] = mat[midX-1][midY+1];
+				mat[midX-1][midY+1] = temp;
+				temp = mat[midX-1][midY];
+				mat[midX-1][midY] = mat[midX][midY-1];
+				mat[midX][midY-1] = mat[midX+1][midY];
+				mat[midX+1][midY] = mat[midX][midY+1];
+				mat[midX][midY+1] = temp;
+
+			}else if(direction ==2){
+				int temp = mat[midX-1][midY-1];
+				mat[midX-1][midY-1] = mat[midX-1][midY+1];
+				mat[midX-1][midY+1] = mat[midX+1][midY+1];
+				mat[midX+1][midY+1] = mat[midX+1][midY-1];
+				mat[midX+1][midY-1] = temp;
+				temp = mat[midX-1][midY];
+				mat[midX-1][midY] = mat[midX][midY+1];
+				mat[midX][midY+1] = mat[midX+1][midY];
+				mat[midX+1][midY] = mat[midX][midY-1];
+				mat[midX][midY-1] = temp;
+			}
+		}
+		for(int i=0;i<5;i++){
+			for(int j=0;j<5;j++){
+				cout<<mat[i][j];
+				if(j != 4){
+					cout<<" ";
+				}else{
+					cout<<endl;
+				}
+			}
+		}
+	}
+
+}
