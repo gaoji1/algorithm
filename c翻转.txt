@@ -1,0 +1,35 @@
+import java.util.*
+
+
+public class Main{
+	
+	public static void roll_3(int direction,int[][] mat,int x,int y){
+
+	}
+
+	public static void roll_2(int direction,int[][] mat,int x,int y){
+		
+	}
+
+	public static void main(String[] args) {
+		Scanner sn = new Scanner(System.in);
+		while(sn.hasNextInt()){
+			int[][] mat = new int[5][5];
+			for(int i=0;i<5;i++){
+				for(int j=0;j<5;j++){
+					mat[i][j] = sn.nextInt();
+				}
+			}
+			int direction = sn.nextInt();
+			int number = sn.nextInt();
+			int x = sn.nextInt();
+			int y = sn.nextInt();
+			if(number == 2){
+				roll_2(direction,mat,x,y);
+			}else{
+				roll_3(direction,mat,x,y);
+			}
+ 		}
+	}
+
+}
