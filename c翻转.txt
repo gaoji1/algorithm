@@ -1,14 +1,87 @@
-import java.util.*
+import java.util.*;
 
 
 public class Main{
-	
-	public static void roll_3(int direction,int[][] mat,int x,int y){
+	public static void swap(int x,int y){
+		int z = x;
+		x=y;
+		y=z;
+	}
+
+	public static int[][] roll_3(int direction,int[][] matrix,int x,int y){
+		int[][] mat = new int[5][5];
+			for(int i=0;i<5;i++){
+				for(int j=0;j<5;j++){
+					mat[i][j] = matrix[i][j];
+				}
+			}
+		if(direction == 1){
+			int midX = x;
+			int midY = y;
+			swap(mat[midX-1][midY-1],mat[midX+1][midY-1]);
+			swap(mat[midX-1][midY],mat[midX-1][midY-1]);
+			swap(mat[midX-1][midY+1],mat[midX-1][midY-1]);
+			swap(mat[midX][midY-1],mat[midX+1][midY]);
+			swap(mat[midX][midY+1],mat[midX-1][midY]);
+			swap(mat[midX+1][midY-1],mat[midX+1][midY+1]);
+			swap(mat[midX+1][midY],mat[midX][midY+1]);
+			swap(mat[midX+1][midY+1],mat[midX-1][midY+1]);
+
+		}else{
+			int midX = x;
+			int midY = y;
+			swap(mat[midX-1][midY-1],mat[midX-1][midY+1]);
+			swap(mat[midX-1][midY],mat[midX][midY+1]);
+			swap(mat[midX-1][midY+1],mat[midX+1][midY+1]);
+			swap(mat[midX][midY-1],mat[midX-1][midY]);
+			swap(mat[midX][midY+1],mat[midX+1][midY]);
+			swap(mat[midX+1][midY-1],mat[midX-1][midY-1]);
+			swap(mat[midX+1][midY],mat[midX][midY-1]);
+			swap(mat[midX+1][midY+1],mat[midX+1][midY-1]);
+
+		}
+		return mat;
 
 	}
 
-	public static void roll_2(int direction,int[][] mat,int x,int y){
+	public static int[][] roll_2(int direction,int[][] matrix,int x,int y){
+		int[][] mat = new int[5][5];
+			for(int i=0;i<5;i++){
+				for(int j=0;j<5;j++){
+					mat[i][j] = matrix[i][j];
+				}
+			}
+		if(direction == 1){
+			int midX = x-1;
+			int midY = y-1;
+			swap(mat[midX][midY],mat[midX+1][midY]);
+			swap(mat[midX][midY+1],mat[midX][midY]);
+			swap(mat[midX+1][midY],mat[midX+1][midY+1]);
+			swap(mat[midX+1][midY+1],mat[midX][midY+1]);
+		}else{
+			int midX = x-1;
+			int midY = y-1;
+			swap(mat[midX][midY],mat[midX][midY+1]);
+			swap(mat[midX][midY+1],mat[midX+1][midY+1]);
+			swap(mat[midX+1][midY],mat[midX][midY]);
+			swap(mat[midX+1][midY+1],mat[midX+1][midY]);
+		}
+		return mat;
 		
+	}
+	public static void printMat(int[][] mat){
+		int len = mat.length;
+		for(int i=0;i<len;i++){
+			String sb = new String();
+			for(int j=0;j<len;j++){
+				if(j != len-1){
+					sb += String.valueOf(mat[i][j]) + " ";
+				}else{
+					sb += String.valueOf(mat[i][j]);
+				}
+			}
+			System.out.println(sb);
+		}
 	}
 
 	public static void main(String[] args) {
@@ -24,11 +97,14 @@ public class Main{
 			int number = sn.nextInt();
 			int x = sn.nextInt();
 			int y = sn.nextInt();
+			int[][] result = new int[5][5];
 			if(number == 2){
-				roll_2(direction,mat,x,y);
+				result = roll_2(direction,mat,x,y);
 			}else{
-				roll_3(direction,mat,x,y);
+				result = roll_3(direction,mat,x,y);
 			}
+			printMat(result);
+
  		}
 	}
 
