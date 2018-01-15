@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<string.h>
+#include<algorithm>
+
+using namespace std;
+
+
+int main(int argc, char const *argv[])
+{
+	int card[10] = {0};
+	char a[100];
+
+	while(scanf("%s",a) != EOF){
+		char b[5];
+		scanf("%s",b);
+
+		for(int i=0;i<10;i++){
+			card[i] =0;
+		}
+
+		int lenA = strlen(a);
+		for(int i=0;i<lenA;i++){
+			card[a[i]-'0'] +=1;
+		}
+
+		int lenB = strlen(b);
+		if(lenB>=1&&lenB<=4){
+			int i;
+			for(i=(b[0]-'0')+1;i<=9;i++){
+				if(card[i]>=lenB){
+					printf("YES\n");
+					break;
+				}
+			}
+			if(i == 10){
+				printf("NO\n");
+			}
+			
+		}else if(lenB == 5){
+			int i;
+			for(i=(b[0]-'0')+1;i<=5;i++){
+				if(card[i] && card[i+1] && card[i+2] && card[i+3] && card[i+4]){
+					printf("YES\n");
+					break;
+				}
+			}
+			if(i == 6){
+				printf("NO\n");
+			}
+			
+		}
+	}
+}
