@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1517967279 source:c:\users\gaoji\documents\algorithm\test\tree_find.cpp
+	<iostream>
+	<vector>
+	<cmath>
+
+1517968310 source:c:\users\gaoji\documents\algorithm\test\zifuchuan_caozuo.cpp
+	<iostream>
+	<string>
+
+1517971173 source:c:\users\gaoji\documents\algorithm\test\fushu_caozuo.cpp
+	<iostream>
+	<vector>
+	<stdio.h>
+	<algorithm>
+
+1517972895 source:c:\users\gaoji\documents\algorithm\test\ercha_paixushu.cpp
+	<iostream>
+
+1517984514 source:c:\users\gaoji\documents\algorithm\test\find_min_num.cpp
+	<iostream>
+	<vector>
+
+1517991507 source:c:\users\gaoji\documents\algorithm\test\shuchu_sushu.cpp
+	<iostream>
+	<vector>
+
+1517994229 source:c:\users\gaoji\documents\algorithm\test\xuanzhuan_juzhen.cpp
+	<iostream>
+
+1518054907 source:c:\users\gaoji\documents\algorithm\test\zifuchuan_pipei.cpp
+	<iostream>
+	<algorithm>
+	<string>
+	<vector>
+
+1518056406 source:c:\users\gaoji\documents\algorithm\test\abc.cpp
+	<iostream>
+
+1518059585 source:c:\users\gaoji\documents\algorithm\test\biorhythms.cpp
+	<iostream>
+
+1518079025 source:c:\users\gaoji\documents\algorithm\test\matrix_a+b.cpp
+	<iostream>
+
+1518230950 source:c:\users\gaoji\documents\algorithm\test\mileage_bank.cpp
+	<iostream>
+
+1518236507 source:c:\users\gaoji\documents\algorithm\test\huoxing_a+b.cpp
+	<iostream>
+	<string>
+	<vector>
+	<sstream>
+
+1518247008 source:c:\users\gaoji\documents\algorithm\test\houzui_zichuan.cpp
+	<iostream>
+	<map>
+

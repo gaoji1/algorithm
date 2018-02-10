@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1517818549 source:c:\users\gaoji\documents\algorithm\exer\main.cpp
+	<iostream>
+	<stdio.h>
+	<sstream>
+	<algorithm>
+
+1517819309 source:c:\users\gaoji\documents\algorithm\exer\hafmantree.cpp
+	<stdio.h>
+	<iostream>
+	<queue>
+
+1517902023 source:c:\users\gaoji\documents\algorithm\exer\juzhen_kcimi.cpp
+	<iostream>
+	<sstream>
+
+1517904359 source:c:\users\gaoji\documents\algorithm\exer\c_fanzhuan.cpp
+	<iostream>
+
+1517910266 source:c:\users\gaoji\documents\algorithm\exer\play_card.cpp
+	<iostream>
+	<sstream>
+
