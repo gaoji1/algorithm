@@ -31,9 +31,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="test1.c">
-			<Option compilerVar="CC" />
-		</Unit>
+		<Unit filename="shuzi_qiuhe.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
