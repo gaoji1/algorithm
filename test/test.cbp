@@ -31,7 +31,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="Sum of Factorials.cpp" />
+		<Unit filename="score_sort.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
